@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=just-martin-really" alt="just-martin-really" /></a> </p>
 
-👨‍💻 I'm using this README to keep track of what i learn throughout my [studies.](studies.)
+👨‍💻 I'm using this README to keep track of what i learn throughout my studies.
 
 <p align="left">
 </p>
