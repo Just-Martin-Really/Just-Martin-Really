@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=just-martin-really&label=Profile%20views&color=0e75b6&style=flat" alt="just-martin-really" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=just-martin-really" alt="just-martin-really" /></a> </p>
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=just-martin-really&theme=dracula" alt="just-martin-really" /></a> </p>
 
 👨‍💻 I'm using this README to keep track of what i learn throughout my studies.
 
