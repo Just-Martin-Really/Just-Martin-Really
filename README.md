@@ -3,8 +3,6 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=just-martin-really&label=Profile%20views&color=0e75b6&style=flat" alt="just-martin-really" /> </p>
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=just-martin-really&theme=dracula)](https://github.com/ryo-ma/github-profile-trophy)
-
 👨‍💻 I'm using this README to keep track of what i learn throughout my studies.
 
 <p align="left">
