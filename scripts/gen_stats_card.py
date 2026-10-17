@@ -26,7 +26,7 @@ CHARW = 7.81
 FS = 13
 LH = 19.5
 X0 = 26
-T = 20.0  # length of one full loop, in seconds
+T = 20.0  # the animation plays once over this window, then holds
 
 THEMES = {
     "dark": dict(
@@ -130,7 +130,7 @@ class Card:
             f' width="{wpx:.2f}"/></clipPath>'
         )
         self.css.append(
-            f"#{cid} rect{{animation:{cid} {T}s steps({n}) infinite}}"
+            f"#{cid} rect{{animation:{cid} {T}s steps({n}) forwards}}"
             f"@keyframes {cid}{{0%,{pct(t0)}%{{width:0}}{pct(t0 + dur)}%,100%{{width:{wpx:.2f}px}}}}"
         )
         self.body.append(f'<g clip-path="url(#{cid})">')
@@ -143,7 +143,7 @@ class Card:
                 f' height="{FS + 2}" fill="{self.th["fg"]}" opacity="0"/>'
             )
             self.css.append(
-                f"#{kid}{{animation:{kid} {T}s steps({n}) infinite}}"
+                f"#{kid}{{animation:{kid} {T}s steps({n}) forwards}}"
                 f"@keyframes {kid}{{0%,{pct(t0)}%{{opacity:.9;transform:translateX(0)}}"
                 f"{pct(t0 + dur)}%{{opacity:.9;transform:translateX({wpx:.2f}px)}}"
                 f"{pct(t0 + dur + .01)}%,100%{{opacity:0;transform:translateX({wpx:.2f}px)}}}}"
@@ -152,7 +152,7 @@ class Card:
     def fade(self, t0, inner, dur=0.22):
         gid = self.uid("f")
         self.css.append(
-            f"#{gid}{{animation:{gid} {T}s linear infinite}}"
+            f"#{gid}{{animation:{gid} {T}s linear forwards}}"
             f"@keyframes {gid}{{0%,{pct(t0)}%{{opacity:0}}{pct(t0 + dur)}%,100%{{opacity:1}}}}"
         )
         self.body.append(f'<g id="{gid}">{inner}</g>')
@@ -252,13 +252,13 @@ def build(theme, data, top_n, seed=7):
         )
         c.fade(t, row)
         c.css.append(
-            f"#{bid}{{animation:{bid} {T}s cubic-bezier(.22,.8,.3,1) infinite}}"
+            f"#{bid}{{animation:{bid} {T}s cubic-bezier(.22,.8,.3,1) forwards}}"
             f"@keyframes {bid}{{0%,{pct(t)}%{{width:0}}{pct(t + 0.85)}%,100%{{width:{w:.1f}px}}}}"
         )
         for i in range(3):
             a, b = t + 0.08 * i, t + 0.08 * (i + 1)
             c.css.append(
-                f"#{pid}s{i}{{animation:{pid}s{i} {T}s step-end infinite}}"
+                f"#{pid}s{i}{{animation:{pid}s{i} {T}s step-end forwards}}"
                 f"@keyframes {pid}s{i}{{0%,{pct(a)}%{{opacity:0}}{pct(a + .001)}%{{opacity:1}}"
                 f"{pct(b)}%,100%{{opacity:0}}}}"
             )
